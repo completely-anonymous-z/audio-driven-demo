@@ -1,0 +1,2234 @@
+{
+  "genericPrompt": "These people are talking to each other.",
+  "component": [
+    [
+      "2",
+      "w/o AFCA (stage 1)",
+      "4.42",
+      "0.52"
+    ],
+    [
+      "2",
+      "w/o CM (stage 1)",
+      "4.39",
+      "0.53"
+    ],
+    [
+      "2",
+      "w/o Face Mask (stage 1)",
+      "4.65",
+      "0.49"
+    ],
+    [
+      "2",
+      "Full (stage 1)",
+      "4.97",
+      "0.47"
+    ],
+    [
+      "2",
+      "AnyTalker-1.3B (full, +12 h refinement)",
+      "5.02",
+      "0.32"
+    ],
+    [
+      "3",
+      "w/o AFCA (stage 1)",
+      "3.94",
+      "0.59"
+    ],
+    [
+      "3",
+      "w/o CM (stage 1)",
+      "3.88",
+      "0.61"
+    ],
+    [
+      "3",
+      "w/o Face Mask (stage 1)",
+      "4.01",
+      "0.56"
+    ],
+    [
+      "3",
+      "Full (stage 1)",
+      "4.24",
+      "0.52"
+    ],
+    [
+      "3",
+      "AnyTalker-1.3B (full, +12 h refinement)",
+      "4.36",
+      "0.38"
+    ],
+    [
+      "4",
+      "w/o AFCA (stage 1)",
+      "3.60",
+      "0.66"
+    ],
+    [
+      "4",
+      "w/o CM (stage 1)",
+      "3.53",
+      "0.69"
+    ],
+    [
+      "4",
+      "w/o Face Mask (stage 1)",
+      "3.71",
+      "0.65"
+    ],
+    [
+      "4",
+      "Full (stage 1)",
+      "3.96",
+      "0.62"
+    ],
+    [
+      "4",
+      "AnyTalker-1.3B (full, +12 h refinement)",
+      "4.15",
+      "0.49"
+    ]
+  ],
+  "dataAblation": [
+    [
+      "CM¹",
+      "3.34",
+      "0.49",
+      "3.10",
+      "0.60",
+      "2.99",
+      "0.67"
+    ],
+    [
+      "RS¹",
+      "4.39",
+      "0.53",
+      "3.88",
+      "0.61",
+      "3.53",
+      "0.69"
+    ],
+    [
+      "RS¹+CM¹",
+      "4.97",
+      "0.47",
+      "4.24",
+      "0.52",
+      "3.96",
+      "0.62"
+    ],
+    [
+      "RS¹+RM²",
+      "3.88",
+      "0.35",
+      "3.69",
+      "0.47",
+      "3.44",
+      "0.58"
+    ],
+    [
+      "RS¹+CM¹+RM²",
+      "5.02",
+      "0.32",
+      "4.36",
+      "0.38",
+      "4.15",
+      "0.49"
+    ]
+  ],
+  "scale": [
+    [
+      "3",
+      "3.67",
+      "0.51",
+      "4.85",
+      "0.45"
+    ],
+    [
+      "6",
+      "3.78",
+      "0.42",
+      "4.99",
+      "0.38"
+    ],
+    [
+      "12",
+      "3.83",
+      "0.37",
+      "5.07",
+      "0.33"
+    ],
+    [
+      "24",
+      "4.29",
+      "0.34",
+      "5.05",
+      "0.32"
+    ],
+    [
+      "48",
+      "4.65",
+      "0.32",
+      "5.12",
+      "0.30"
+    ],
+    [
+      "96",
+      "4.96",
+      "0.32",
+      "5.10",
+      "0.32"
+    ]
+  ],
+  "trajectory": [
+    [
+      "4",
+      "3.71",
+      "0.50",
+      "4.57",
+      "0.44"
+    ],
+    [
+      "6",
+      "3.64",
+      "0.48",
+      "4.52",
+      "0.45"
+    ],
+    [
+      "8",
+      "3.82",
+      "0.47",
+      "4.68",
+      "0.42"
+    ],
+    [
+      "10",
+      "3.89",
+      "0.44",
+      "4.97",
+      "0.37"
+    ],
+    [
+      "12",
+      "3.81",
+      "0.42",
+      "5.06",
+      "0.32"
+    ],
+    [
+      "14",
+      "3.95",
+      "0.42",
+      "5.01",
+      "0.35"
+    ],
+    [
+      "16",
+      "4.07",
+      "0.39",
+      "5.10",
+      "0.32"
+    ],
+    [
+      "18",
+      "4.03",
+      "0.38",
+      "5.13",
+      "0.31"
+    ],
+    [
+      "20",
+      "4.08",
+      "0.36",
+      "5.09",
+      "0.33"
+    ],
+    [
+      "22",
+      "4.15",
+      "0.37",
+      "5.05",
+      "0.32"
+    ],
+    [
+      "24",
+      "4.24",
+      "0.36",
+      "5.09",
+      "0.31"
+    ]
+  ],
+  "ci": [
+    [
+      "2",
+      "Sync-C* ↑",
+      "MultiTalk",
+      "7.02",
+      "6.88",
+      "+0.14",
+      "[+0.05, +0.22]"
+    ],
+    [
+      "2",
+      "ΔResp ↓",
+      "MultiTalk",
+      "0.21",
+      "0.27",
+      "−0.06",
+      "[−0.11, −0.04]"
+    ],
+    [
+      "2",
+      "Preference share ↑",
+      "MultiTalk",
+      "49.40%",
+      "38.20%",
+      "+11.20 pp",
+      "[+6.20, +16.40] pp"
+    ],
+    [
+      "3",
+      "Sync-C* ↑",
+      "Playmate2",
+      "6.37",
+      "4.68",
+      "+1.69",
+      "[+1.15, +2.42]"
+    ],
+    [
+      "3",
+      "ΔResp ↓",
+      "Playmate2",
+      "0.23",
+      "0.38",
+      "−0.15",
+      "[−0.24, −0.11]"
+    ],
+    [
+      "3",
+      "Preference share ↑",
+      "Playmate2",
+      "76.56%",
+      "23.44%",
+      "+53.12 pp",
+      "[+38.25, +65.10] pp"
+    ],
+    [
+      "4",
+      "Sync-C* ↑",
+      "Playmate2",
+      "6.14",
+      "4.40",
+      "+1.74",
+      "[+1.12, +2.36]"
+    ],
+    [
+      "4",
+      "ΔResp ↓",
+      "Playmate2",
+      "0.26",
+      "0.44",
+      "−0.18",
+      "[−0.27, −0.08]"
+    ],
+    [
+      "4",
+      "Preference share ↑",
+      "Playmate2",
+      "78.24%",
+      "21.76%",
+      "+56.48 pp",
+      "[+41.08, +70.40] pp"
+    ]
+  ],
+  "agreement": [
+    [
+      "2",
+      "100",
+      "89.00"
+    ],
+    [
+      "3",
+      "100",
+      "84.00"
+    ],
+    [
+      "4",
+      "100",
+      "77.00"
+    ]
+  ],
+  "audio": [
+    {
+      "id": "e1",
+      "code": "E1",
+      "title": "Happy speech",
+      "description": "The right participant’s speech is edited toward a happy delivery. Observe the left participant in the 0.00–4.19 s listening interval. The emotion edit uses Step-Audio-EditX.",
+      "videos": [
+        {
+          "label": "Original audio",
+          "src": "assets/videos/e1-baseline.mp4",
+          "poster": "assets/posters/e1-baseline.jpg",
+          "duration": 8.375
+        },
+        {
+          "label": "Happy audio edit",
+          "src": "assets/videos/e1-edited.mp4",
+          "poster": "assets/posters/e1-edited.jpg",
+          "duration": 8.375
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "code": "E2",
+      "title": "Sad speech",
+      "description": "The left participant’s speech is edited toward a sad delivery. Observe the right participant in the 2.00–5.16 s listening interval. The emotion edit uses Step-Audio-EditX.",
+      "videos": [
+        {
+          "label": "Original audio",
+          "src": "assets/videos/e2-baseline.mp4",
+          "poster": "assets/posters/e2-baseline.jpg",
+          "duration": 7.708333333333333
+        },
+        {
+          "label": "Sad audio edit",
+          "src": "assets/videos/e2-edited.mp4",
+          "poster": "assets/posters/e2-edited.jpg",
+          "duration": 7.708333333333333
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "code": "E3",
+      "title": "Speaker muting",
+      "description": "The right participant’s audio is replaced with silence; the left audio is retained. The left woman no longer makes the head turn seen in the baseline. Shared comparison interval: 0–7.875 s.",
+      "videos": [
+        {
+          "label": "Original audio",
+          "src": "assets/videos/e3-baseline-r2.mp4",
+          "poster": "assets/posters/e3-baseline-r2.jpg",
+          "duration": 7.875
+        },
+        {
+          "label": "Right audio muted",
+          "src": "assets/videos/e3-edited.mp4",
+          "poster": "assets/posters/e3-edited.jpg",
+          "duration": 9.041666666666666
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "code": "E4",
+      "title": "A one-second audio shift",
+      "description": "The left audio is delayed by 1 s, with silence prepended; the right audio is retained. The wider mouth-opening motion before speech described in the response occurs in the left participant, whose audio is edited.",
+      "videos": [
+        {
+          "label": "Original audio",
+          "src": "assets/videos/e4-baseline.mp4",
+          "poster": "assets/posters/e4-baseline.jpg",
+          "duration": 9.708333333333334
+        },
+        {
+          "label": "Left audio delayed 1 s",
+          "src": "assets/videos/e4-edited.mp4",
+          "poster": "assets/posters/e4-edited.jpg",
+          "duration": 9.708333333333334
+        }
+      ]
+    }
+  ],
+  "text": [
+    {
+      "id": "e44",
+      "code": "E44",
+      "title": "Text comparison 1",
+      "description": "Compare each instruction with the baseline. The two instructions address different participants: the right participant and the left participant, respectively.",
+      "videos": [
+        {
+          "label": "Generic prompt",
+          "src": "assets/videos/e44-0.mp4",
+          "poster": "assets/posters/e44-0.jpg",
+          "duration": 8.375,
+          "prompt": "These people are talking to each other."
+        },
+        {
+          "label": "Right participant: toward partner",
+          "src": "assets/videos/e44-1.mp4",
+          "poster": "assets/posters/e44-1.jpg",
+          "duration": 8.375,
+          "prompt": "These people are talking to each other. The right listener turns toward the speaker and maintains eye contact with the speaker while listening."
+        },
+        {
+          "label": "Left participant: toward left edge",
+          "src": "assets/videos/e44-2.mp4",
+          "poster": "assets/posters/e44-2.jpg",
+          "duration": 8.375,
+          "prompt": "These people are talking to each other. The left listener turns the head and eyes toward the left edge of the image, away from the speaker."
+        }
+      ]
+    },
+    {
+      "id": "e45",
+      "code": "E45",
+      "title": "Text comparison 2",
+      "description": "The instruction variants name the left participant (pink top). The complete input text is shown beneath each video; left and right refer to the displayed image.",
+      "videos": [
+        {
+          "label": "Generic prompt",
+          "src": "assets/videos/e45-0.mp4",
+          "poster": "assets/posters/e45-0.jpg",
+          "duration": 7.708333333333333,
+          "prompt": "These people are talking to each other."
+        },
+        {
+          "label": "Left participant: toward right edge",
+          "src": "assets/videos/e45-1.mp4",
+          "poster": "assets/posters/e45-1.jpg",
+          "duration": 7.708333333333333,
+          "prompt": "These people are talking to each other. The left listener turns the head and eyes toward the right edge of the image, away from the speaker."
+        },
+        {
+          "label": "Left participant: toward camera",
+          "src": "assets/videos/e45-2.mp4",
+          "poster": "assets/posters/e45-2.jpg",
+          "duration": 7.708333333333333,
+          "prompt": "These people are talking to each other. The left listener turns to face the camera and looks directly into the camera lens while listening."
+        }
+      ]
+    }
+  ],
+  "groupClips": [
+    {
+      "id": "e11",
+      "code": "E11",
+      "title": "Listener orientation",
+      "description": "Source interval: 0.00–5.00 s. The silent participant in a waistcoat turns toward the other participants.",
+      "fullCase": "e17",
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e11-gt.mp4",
+          "poster": "assets/posters/e11-gt.jpg",
+          "duration": 5.0
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e11-seed45.mp4",
+          "poster": "assets/posters/e11-seed45.jpg",
+          "duration": 5.0
+        }
+      ]
+    },
+    {
+      "id": "e12",
+      "code": "E12",
+      "title": "Gaze during listening",
+      "description": "Source interval: 0.00–5.00 s. The silent participant in a white blouse raises her gaze toward the speaking participant. This interval contains no speaker change.",
+      "fullCase": "e20",
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e12-gt.mp4",
+          "poster": "assets/posters/e12-gt.jpg",
+          "duration": 5.0
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e12-seed45.mp4",
+          "poster": "assets/posters/e12-seed45.jpg",
+          "duration": 5.0
+        }
+      ]
+    },
+    {
+      "id": "e13",
+      "code": "E13",
+      "title": "A change of speaker",
+      "description": "Source interval: 4.00–10.21 s. The central participant speaks at 4.56–6.48 s; the participant in a black coat starts at 6.72 s. The central participant later turns toward her.",
+      "fullCase": "e26",
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e13-gt.mp4",
+          "poster": "assets/posters/e13-gt.jpg",
+          "duration": 6.208333333333333
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e13-seed45.mp4",
+          "poster": "assets/posters/e13-seed45.jpg",
+          "duration": 6.208333333333333
+        }
+      ]
+    }
+  ],
+  "groupCases": [
+    {
+      "id": "e14",
+      "code": "E14",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e14-gt.mp4",
+          "poster": "assets/posters/e14-gt.jpg",
+          "duration": 11.666666666666666
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e14-seed44.mp4",
+          "poster": "assets/posters/e14-seed44.jpg",
+          "duration": 11.708333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e14-seed45.mp4",
+          "poster": "assets/posters/e14-seed45.jpg",
+          "duration": 11.708333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the short-haired man in a dark suit, pale shirt and pale tie"
+        },
+        {
+          "id": "P02",
+          "appearance": "the woman with curly brown hair and bangs wearing a dark short-sleeve top"
+        },
+        {
+          "id": "P03",
+          "appearance": "the woman with long straight dark hair, a black V-neck top and papers in her hands"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P03",
+          "start": 0.72,
+          "end": 2.16
+        },
+        {
+          "person": "P02",
+          "start": 3.6,
+          "end": 10.16
+        },
+        {
+          "person": "P01",
+          "start": 10.96,
+          "end": 11.666666666666666
+        }
+      ]
+    },
+    {
+      "id": "e15",
+      "code": "E15",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e15-gt.mp4",
+          "poster": "assets/posters/e15-gt.jpg",
+          "duration": 11.75
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e15-seed44.mp4",
+          "poster": "assets/posters/e15-seed44.jpg",
+          "duration": 11.708333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e15-seed45.mp4",
+          "poster": "assets/posters/e15-seed45.jpg",
+          "duration": 11.708333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the woman with a brown ponytail wearing a dark blue top"
+        },
+        {
+          "id": "P02",
+          "appearance": "the man with short dark hair and a beard wearing a gray suit and blue tie"
+        },
+        {
+          "id": "P03",
+          "appearance": "the woman with long loose brown hair wearing a black leather jacket"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P01",
+          "start": 0.8,
+          "end": 5.6
+        },
+        {
+          "person": "P03",
+          "start": 8.88,
+          "end": 11.52
+        }
+      ]
+    },
+    {
+      "id": "e16",
+      "code": "E16",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e16-gt.mp4",
+          "poster": "assets/posters/e16-gt.jpg",
+          "duration": 8.625
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e16-seed44.mp4",
+          "poster": "assets/posters/e16-seed44.jpg",
+          "duration": 8.541666666666666
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e16-seed45.mp4",
+          "poster": "assets/posters/e16-seed45.jpg",
+          "duration": 8.541666666666666
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the woman with long dark hair wearing a black leather jacket over a gray top"
+        },
+        {
+          "id": "P02",
+          "appearance": "the seated man with a shaved head wearing a black T-shirt and a red wristband"
+        },
+        {
+          "id": "P03",
+          "appearance": "the woman with shoulder-length brown hair wearing blue medical scrubs and an ID badge"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P03",
+          "start": 4.0,
+          "end": 4.72
+        },
+        {
+          "person": "P01",
+          "start": 6.16,
+          "end": 8.4
+        }
+      ]
+    },
+    {
+      "id": "e17",
+      "code": "E17",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e17-gt.mp4",
+          "poster": "assets/posters/e17-gt.jpg",
+          "duration": 9.666666666666666
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e17-seed44.mp4",
+          "poster": "assets/posters/e17-seed44.jpg",
+          "duration": 9.708333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e17-seed45.mp4",
+          "poster": "assets/posters/e17-seed45.jpg",
+          "duration": 9.708333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the fair-haired man wearing a pale striped shirt, dark waistcoat, red tie and brown shoulder strap"
+        },
+        {
+          "id": "P02",
+          "appearance": "the man with dark-rimmed glasses wearing a dark suit, bow tie and pale pocket square"
+        },
+        {
+          "id": "P03",
+          "appearance": "the curly red-haired woman wearing a dark coat over a plaid shirt"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P02",
+          "start": 0,
+          "end": 0.72
+        },
+        {
+          "person": "P03",
+          "start": 1.68,
+          "end": 3.92
+        },
+        {
+          "person": "P02",
+          "start": 4.72,
+          "end": 9.666666666666666
+        }
+      ]
+    },
+    {
+      "id": "e18",
+      "code": "E18",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e18-gt.mp4",
+          "poster": "assets/posters/e18-gt.jpg",
+          "duration": 10.708333333333334
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e18-seed44.mp4",
+          "poster": "assets/posters/e18-seed44.jpg",
+          "duration": 10.708333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e18-seed45.mp4",
+          "poster": "assets/posters/e18-seed45.jpg",
+          "duration": 10.708333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the dark-haired man wearing a white fringed shirt and holding a drinking glass"
+        },
+        {
+          "id": "P02",
+          "appearance": "the woman with long dark hair wearing a pale blouse tied at the waist"
+        },
+        {
+          "id": "P03",
+          "appearance": "the blonde woman wearing a red dress with gold details"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P01",
+          "start": 0,
+          "end": 4.08
+        },
+        {
+          "person": "P02",
+          "start": 4.32,
+          "end": 6.96
+        },
+        {
+          "person": "P01",
+          "start": 7.2,
+          "end": 10.708333333333334
+        }
+      ]
+    },
+    {
+      "id": "e19",
+      "code": "E19",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e19-gt.mp4",
+          "poster": "assets/posters/e19-gt.jpg",
+          "duration": 10.666666666666666
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e19-seed44.mp4",
+          "poster": "assets/posters/e19-seed44.jpg",
+          "duration": 10.708333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e19-seed45.mp4",
+          "poster": "assets/posters/e19-seed45.jpg",
+          "duration": 10.708333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the bald man wearing a brown long-sleeve shirt"
+        },
+        {
+          "id": "P02",
+          "appearance": "the man with a closely shaved head wearing a navy polo shirt with pale trim"
+        },
+        {
+          "id": "P03",
+          "appearance": "the man with braided hair wearing a dark patterned polo shirt with yellow trim and a cross necklace"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P03",
+          "start": 0,
+          "end": 2.96
+        },
+        {
+          "person": "P01",
+          "start": 3.6,
+          "end": 4.32
+        },
+        {
+          "person": "P03",
+          "start": 5.6,
+          "end": 10.666666666666666
+        }
+      ]
+    },
+    {
+      "id": "e20",
+      "code": "E20",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e20-gt.mp4",
+          "poster": "assets/posters/e20-gt.jpg",
+          "duration": 10.333333333333334
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e20-seed44.mp4",
+          "poster": "assets/posters/e20-seed44.jpg",
+          "duration": 10.208333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e20-seed45.mp4",
+          "poster": "assets/posters/e20-seed45.jpg",
+          "duration": 10.208333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the tall man with a shaved head wearing a white security uniform shirt and dark tie"
+        },
+        {
+          "id": "P02",
+          "appearance": "the woman with long wavy brown hair wearing a white button-up shirt"
+        },
+        {
+          "id": "P03",
+          "appearance": "the man with short brown hair wearing a pale blue dress shirt and dark tie"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P01",
+          "start": 2.16,
+          "end": 8.48
+        },
+        {
+          "person": "P03",
+          "start": 9.28,
+          "end": 10.32
+        }
+      ]
+    },
+    {
+      "id": "e21",
+      "code": "E21",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e21-gt.mp4",
+          "poster": "assets/posters/e21-gt.jpg",
+          "duration": 10.333333333333334
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e21-seed44.mp4",
+          "poster": "assets/posters/e21-seed44.jpg",
+          "duration": 10.208333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e21-seed45.mp4",
+          "poster": "assets/posters/e21-seed45.jpg",
+          "duration": 10.208333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the dark-haired bearded man wearing a black jacket and clerical collar"
+        },
+        {
+          "id": "P02",
+          "appearance": "the man with short curly hair wearing a blue polo shirt"
+        },
+        {
+          "id": "P03",
+          "appearance": "the blonde woman with tied-back hair wearing a cream jacket over a maroon blouse"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P01",
+          "start": 1.12,
+          "end": 5.12
+        },
+        {
+          "person": "P02",
+          "start": 6.4,
+          "end": 6.8
+        },
+        {
+          "person": "P01",
+          "start": 8.88,
+          "end": 9.68
+        }
+      ]
+    },
+    {
+      "id": "e22",
+      "code": "E22",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e22-gt.mp4",
+          "poster": "assets/posters/e22-gt.jpg",
+          "duration": 10.333333333333334
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e22-seed44.mp4",
+          "poster": "assets/posters/e22-seed44.jpg",
+          "duration": 10.208333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e22-seed45.mp4",
+          "poster": "assets/posters/e22-seed45.jpg",
+          "duration": 10.208333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the man with short dark hair wearing a dark suit, white shirt and pale blue tie"
+        },
+        {
+          "id": "P02",
+          "appearance": "the woman with a short brown bob wearing a black blazer, dark red top and gold necklace"
+        },
+        {
+          "id": "P03",
+          "appearance": "the man with curly dark hair wearing a dark jacket, dark shirt and pale pocket square"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P02",
+          "start": 1.04,
+          "end": 2.32
+        },
+        {
+          "person": "P01",
+          "start": 3.2,
+          "end": 5.2
+        },
+        {
+          "person": "P02",
+          "start": 6.32,
+          "end": 9.76
+        }
+      ]
+    },
+    {
+      "id": "e23",
+      "code": "E23",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e23-gt.mp4",
+          "poster": "assets/posters/e23-gt.jpg",
+          "duration": 10.333333333333334
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e23-seed44.mp4",
+          "poster": "assets/posters/e23-seed44.jpg",
+          "duration": 10.208333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e23-seed45.mp4",
+          "poster": "assets/posters/e23-seed45.jpg",
+          "duration": 10.208333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the woman with long brown hair wearing a red patterned blouse and blue jeans"
+        },
+        {
+          "id": "P02",
+          "appearance": "the blonde woman wearing a white short-sleeve shirt and purple trousers"
+        },
+        {
+          "id": "P03",
+          "appearance": "the woman with a short dark bob wearing a pale pink T-shirt and gray trousers"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P02",
+          "start": 1.04,
+          "end": 7.44
+        },
+        {
+          "person": "P01",
+          "start": 7.52,
+          "end": 8.96
+        }
+      ]
+    },
+    {
+      "id": "e24",
+      "code": "E24",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e24-gt.mp4",
+          "poster": "assets/posters/e24-gt.jpg",
+          "duration": 10.333333333333334
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e24-seed44.mp4",
+          "poster": "assets/posters/e24-seed44.jpg",
+          "duration": 10.208333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e24-seed45.mp4",
+          "poster": "assets/posters/e24-seed45.jpg",
+          "duration": 10.208333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the woman with wavy brown hair wearing a pale pink sleeveless dress and gold headband"
+        },
+        {
+          "id": "P02",
+          "appearance": "the dark-haired man wearing a gray sweater with black sleeves and white animal motifs"
+        },
+        {
+          "id": "P03",
+          "appearance": "the fair-haired man wearing a blue zip-up hoodie over a gray shirt"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P02",
+          "start": 0,
+          "end": 5.6
+        },
+        {
+          "person": "P01",
+          "start": 7.76,
+          "end": 8.48
+        },
+        {
+          "person": "P02",
+          "start": 9.6,
+          "end": 10.24
+        }
+      ]
+    },
+    {
+      "id": "e25",
+      "code": "E25",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e25-gt.mp4",
+          "poster": "assets/posters/e25-gt.jpg",
+          "duration": 10.333333333333334
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e25-seed44.mp4",
+          "poster": "assets/posters/e25-seed44.jpg",
+          "duration": 10.208333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e25-seed45.mp4",
+          "poster": "assets/posters/e25-seed45.jpg",
+          "duration": 10.208333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the man wearing a brown suit and brown brimmed hat"
+        },
+        {
+          "id": "P02",
+          "appearance": "the man wearing a white double-breasted service jacket and dark trousers"
+        },
+        {
+          "id": "P03",
+          "appearance": "the fair-haired man wearing a black tailcoat, white waistcoat and white bow tie"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P03",
+          "start": 0,
+          "end": 7.76
+        },
+        {
+          "person": "P01",
+          "start": 8.72,
+          "end": 9.6
+        },
+        {
+          "person": "P03",
+          "start": 9.76,
+          "end": 10.32
+        }
+      ]
+    },
+    {
+      "id": "e26",
+      "code": "E26",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e26-gt.mp4",
+          "poster": "assets/posters/e26-gt.jpg",
+          "duration": 10.333333333333334
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e26-seed44.mp4",
+          "poster": "assets/posters/e26-seed44.jpg",
+          "duration": 10.208333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e26-seed45.mp4",
+          "poster": "assets/posters/e26-seed45.jpg",
+          "duration": 10.208333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the woman with a long black ponytail wearing a gray coat"
+        },
+        {
+          "id": "P02",
+          "appearance": "the short-haired man wearing a dark overcoat over a blue sweater and tie"
+        },
+        {
+          "id": "P03",
+          "appearance": "the woman with long loose dark hair wearing a black coat"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P01",
+          "start": 0.24,
+          "end": 2.16
+        },
+        {
+          "person": "P02",
+          "start": 4.56,
+          "end": 6.48
+        },
+        {
+          "person": "P03",
+          "start": 6.72,
+          "end": 10.32
+        }
+      ]
+    },
+    {
+      "id": "e27",
+      "code": "E27",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e27-gt.mp4",
+          "poster": "assets/posters/e27-gt.jpg",
+          "duration": 10.333333333333334
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e27-seed44.mp4",
+          "poster": "assets/posters/e27-seed44.jpg",
+          "duration": 10.208333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e27-seed45.mp4",
+          "poster": "assets/posters/e27-seed45.jpg",
+          "duration": 10.208333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the short-haired man wearing a dark suit and white shirt with his arms folded"
+        },
+        {
+          "id": "P02",
+          "appearance": "the red-haired woman wearing a white short-sleeve shirt under a brown waistcoat"
+        },
+        {
+          "id": "P03",
+          "appearance": "the seated person with short brown hair wearing a pale pink long-sleeve shirt"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P03",
+          "start": 0,
+          "end": 2.72
+        },
+        {
+          "person": "P01",
+          "start": 2.96,
+          "end": 3.44
+        },
+        {
+          "person": "P03",
+          "start": 4.32,
+          "end": 5.84
+        }
+      ]
+    },
+    {
+      "id": "e28",
+      "code": "E28",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e28-gt.mp4",
+          "poster": "assets/posters/e28-gt.jpg",
+          "duration": 10.333333333333334
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e28-seed44.mp4",
+          "poster": "assets/posters/e28-seed44.jpg",
+          "duration": 10.208333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e28-seed45.mp4",
+          "poster": "assets/posters/e28-seed45.jpg",
+          "duration": 10.208333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the man with dark-rimmed glasses wearing a brown shirt and striped tie"
+        },
+        {
+          "id": "P02",
+          "appearance": "the white-haired man wearing a white lab coat, pale blue shirt and striped tie"
+        },
+        {
+          "id": "P03",
+          "appearance": "the curly-haired woman wearing a blue nurse dress, white apron and white nurse cap"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P02",
+          "start": 0.08,
+          "end": 5.44
+        },
+        {
+          "person": "P03",
+          "start": 6.32,
+          "end": 7.68
+        },
+        {
+          "person": "P02",
+          "start": 7.92,
+          "end": 10.24
+        }
+      ]
+    },
+    {
+      "id": "e29",
+      "code": "E29",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e29-gt.mp4",
+          "poster": "assets/posters/e29-gt.jpg",
+          "duration": 10.25
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e29-seed44.mp4",
+          "poster": "assets/posters/e29-seed44.jpg",
+          "duration": 10.208333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e29-seed45.mp4",
+          "poster": "assets/posters/e29-seed45.jpg",
+          "duration": 10.208333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the man with short hair and a beard wearing an orange hoodie with reflective stripes"
+        },
+        {
+          "id": "P02",
+          "appearance": "the bearded man wearing a dark knit cap and dark jacket over a gray layer"
+        },
+        {
+          "id": "P03",
+          "appearance": "the person with curly dark hair wearing a pale gray polo shirt over dark sleeves"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P02",
+          "start": 0,
+          "end": 1.28
+        },
+        {
+          "person": "P01",
+          "start": 2.16,
+          "end": 3.52
+        },
+        {
+          "person": "P02",
+          "start": 4.96,
+          "end": 9.76
+        }
+      ]
+    },
+    {
+      "id": "e30",
+      "code": "E30",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e30-gt.mp4",
+          "poster": "assets/posters/e30-gt.jpg",
+          "duration": 10.25
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e30-seed44.mp4",
+          "poster": "assets/posters/e30-seed44.jpg",
+          "duration": 10.208333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e30-seed45.mp4",
+          "poster": "assets/posters/e30-seed45.jpg",
+          "duration": 10.208333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the person with short pink hair and glasses wearing a pale blue long-sleeve top"
+        },
+        {
+          "id": "P02",
+          "appearance": "the woman wearing a pink patterned headscarf and a brown leather jacket"
+        },
+        {
+          "id": "P03",
+          "appearance": "the woman with shoulder-length brown hair wearing a dark teal coat"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P01",
+          "start": 0,
+          "end": 2.08
+        },
+        {
+          "person": "P02",
+          "start": 2.48,
+          "end": 4.4
+        },
+        {
+          "person": "P01",
+          "start": 5.12,
+          "end": 9.68
+        }
+      ]
+    },
+    {
+      "id": "e31",
+      "code": "E31",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e31-gt.mp4",
+          "poster": "assets/posters/e31-gt.jpg",
+          "duration": 10.25
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e31-seed44.mp4",
+          "poster": "assets/posters/e31-seed44.jpg",
+          "duration": 10.208333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e31-seed45.mp4",
+          "poster": "assets/posters/e31-seed45.jpg",
+          "duration": 10.208333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the woman with a short brown bob wearing a white coat and an ID badge"
+        },
+        {
+          "id": "P02",
+          "appearance": "the man with short dark hair wearing a purple shirt and patterned maroon tie"
+        },
+        {
+          "id": "P03",
+          "appearance": "the red-haired woman wearing a checkered cap and a white coat"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P02",
+          "start": 1.28,
+          "end": 6.64
+        },
+        {
+          "person": "P03",
+          "start": 6.96,
+          "end": 10.24
+        }
+      ]
+    },
+    {
+      "id": "e32",
+      "code": "E32",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e32-gt.mp4",
+          "poster": "assets/posters/e32-gt.jpg",
+          "duration": 10.25
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e32-seed44.mp4",
+          "poster": "assets/posters/e32-seed44.jpg",
+          "duration": 10.208333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e32-seed45.mp4",
+          "poster": "assets/posters/e32-seed45.jpg",
+          "duration": 10.208333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the dark-haired man wearing a pale gray suit, purple shirt and patterned tie"
+        },
+        {
+          "id": "P02",
+          "appearance": "the tall man with short fair hair wearing a pale blue shirt and blue striped tie"
+        },
+        {
+          "id": "P03",
+          "appearance": "the bald man with a gray beard wearing a gray suit and red tie"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P02",
+          "start": 0,
+          "end": 1.12
+        },
+        {
+          "person": "P03",
+          "start": 1.92,
+          "end": 2.56
+        },
+        {
+          "person": "P02",
+          "start": 3.6,
+          "end": 6.56
+        }
+      ]
+    },
+    {
+      "id": "e33",
+      "code": "E33",
+      "people": 3,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e33-gt.mp4",
+          "poster": "assets/posters/e33-gt.jpg",
+          "duration": 10.125
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e33-seed44.mp4",
+          "poster": "assets/posters/e33-seed44.jpg",
+          "duration": 10.041666666666666
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e33-seed45.mp4",
+          "poster": "assets/posters/e33-seed45.jpg",
+          "duration": 10.041666666666666
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the woman with curly red hair wearing a black top with sunglasses on her head"
+        },
+        {
+          "id": "P02",
+          "appearance": "the person with short dark hair wearing a striped shirt"
+        },
+        {
+          "id": "P03",
+          "appearance": "the woman with short dark hair wearing a pink patterned sleeveless blouse"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P03",
+          "start": 4.88,
+          "end": 6.24
+        },
+        {
+          "person": "P01",
+          "start": 7.04,
+          "end": 7.52
+        },
+        {
+          "person": "P02",
+          "start": 7.76,
+          "end": 8.96
+        }
+      ]
+    },
+    {
+      "id": "e34",
+      "code": "E34",
+      "people": 4,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e34-gt.mp4",
+          "poster": "assets/posters/e34-gt.jpg",
+          "duration": 10.416666666666666
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e34-seed44.mp4",
+          "poster": "assets/posters/e34-seed44.jpg",
+          "duration": 10.375
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e34-seed45.mp4",
+          "poster": "assets/posters/e34-seed45.jpg",
+          "duration": 10.375
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the man with wavy brown hair and a mustache wearing a dark suit and purple tie"
+        },
+        {
+          "id": "P02",
+          "appearance": "the dark-haired man wearing a gray suit and brown tie"
+        },
+        {
+          "id": "P03",
+          "appearance": "the seated older man with swept-back white hair wearing a brown suit"
+        },
+        {
+          "id": "P04",
+          "appearance": "the man with short dark hair wearing a brown blazer over a yellow turtleneck"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P01",
+          "start": 0,
+          "end": 2.48
+        },
+        {
+          "person": "P04",
+          "start": 5.44,
+          "end": 7.52
+        },
+        {
+          "person": "P01",
+          "start": 8.0,
+          "end": 10.0
+        }
+      ]
+    },
+    {
+      "id": "e35",
+      "code": "E35",
+      "people": 4,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e35-gt.mp4",
+          "poster": "assets/posters/e35-gt.jpg",
+          "duration": 10.333333333333334
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e35-seed44.mp4",
+          "poster": "assets/posters/e35-seed44.jpg",
+          "duration": 10.208333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e35-seed45.mp4",
+          "poster": "assets/posters/e35-seed45.jpg",
+          "duration": 10.208333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the seated gray-haired man wearing a dark suit and pale shirt"
+        },
+        {
+          "id": "P02",
+          "appearance": "the man with thinning hair wearing a dark suit, white shirt and dark tie"
+        },
+        {
+          "id": "P03",
+          "appearance": "the man with swept-back dark hair and a short beard wearing a dark suit and holding a gray briefcase"
+        },
+        {
+          "id": "P04",
+          "appearance": "the tall man with short brown hair wearing a dark suit and holding a black folder"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P01",
+          "start": 1.2,
+          "end": 2.72
+        },
+        {
+          "person": "P03",
+          "start": 3.92,
+          "end": 6.4
+        },
+        {
+          "person": "P04",
+          "start": 8.8,
+          "end": 9.6
+        }
+      ]
+    },
+    {
+      "id": "e36",
+      "code": "E36",
+      "people": 4,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e36-gt.mp4",
+          "poster": "assets/posters/e36-gt.jpg",
+          "duration": 11.833333333333334
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e36-seed44.mp4",
+          "poster": "assets/posters/e36-seed44.jpg",
+          "duration": 11.708333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e36-seed45.mp4",
+          "poster": "assets/posters/e36-seed45.jpg",
+          "duration": 11.708333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the man with short graying hair wearing a pale blue button-up shirt"
+        },
+        {
+          "id": "P02",
+          "appearance": "the bald man wearing a dark sweater over a white-collared shirt with his arms folded"
+        },
+        {
+          "id": "P03",
+          "appearance": "the white-haired man wearing red coveralls over a gray turtleneck"
+        },
+        {
+          "id": "P04",
+          "appearance": "the man wearing a white chef jacket, black chef hat and striped apron"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P04",
+          "start": 0,
+          "end": 2.4
+        },
+        {
+          "person": "P01",
+          "start": 3.2,
+          "end": 10.56
+        }
+      ]
+    },
+    {
+      "id": "e37",
+      "code": "E37",
+      "people": 4,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e37-gt.mp4",
+          "poster": "assets/posters/e37-gt.jpg",
+          "duration": 5.333333333333333
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e37-seed44.mp4",
+          "poster": "assets/posters/e37-seed44.jpg",
+          "duration": 5.208333333333333
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e37-seed45.mp4",
+          "poster": "assets/posters/e37-seed45.jpg",
+          "duration": 5.208333333333333
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the woman with long dark hair wearing a black and white houndstooth coat and pale scarf"
+        },
+        {
+          "id": "P02",
+          "appearance": "the man with short dark hair wearing a navy double-breasted coat"
+        },
+        {
+          "id": "P03",
+          "appearance": "the woman with long wavy brown hair wearing a maroon coat over a blue top"
+        },
+        {
+          "id": "P04",
+          "appearance": "the older man wearing a beige brimmed hat and a brown leather jacket with a pale collar"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P03",
+          "start": 1.28,
+          "end": 4.0
+        },
+        {
+          "person": "P02",
+          "start": 4.8,
+          "end": 5.333333333333333
+        }
+      ]
+    },
+    {
+      "id": "e38",
+      "code": "E38",
+      "people": 4,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e38-gt.mp4",
+          "poster": "assets/posters/e38-gt.jpg",
+          "duration": 5.333333333333333
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e38-seed44.mp4",
+          "poster": "assets/posters/e38-seed44.jpg",
+          "duration": 5.208333333333333
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e38-seed45.mp4",
+          "poster": "assets/posters/e38-seed45.jpg",
+          "duration": 5.208333333333333
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the person with long wavy light-brown hair wearing a pale pink sleeveless top"
+        },
+        {
+          "id": "P02",
+          "appearance": "the blonde woman wearing a pale sleeveless top"
+        },
+        {
+          "id": "P03",
+          "appearance": "the woman with long brown hair wearing a dark sleeveless top"
+        },
+        {
+          "id": "P04",
+          "appearance": "the short-haired man wearing a pale blue sleeveless top with an upper-arm tattoo"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P01",
+          "start": 0.32,
+          "end": 0.72
+        },
+        {
+          "person": "P03",
+          "start": 1.92,
+          "end": 3.36
+        },
+        {
+          "person": "P04",
+          "start": 4.0,
+          "end": 4.8
+        }
+      ]
+    },
+    {
+      "id": "e39",
+      "code": "E39",
+      "people": 4,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e39-gt.mp4",
+          "poster": "assets/posters/e39-gt.jpg",
+          "duration": 5.333333333333333
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e39-seed44.mp4",
+          "poster": "assets/posters/e39-seed44.jpg",
+          "duration": 5.208333333333333
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e39-seed45.mp4",
+          "poster": "assets/posters/e39-seed45.jpg",
+          "duration": 5.208333333333333
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the blonde woman wearing a black jacket with zippers"
+        },
+        {
+          "id": "P02",
+          "appearance": "the man with short brown hair wearing a gray long-sleeve shirt and wristwatch"
+        },
+        {
+          "id": "P03",
+          "appearance": "the dark-haired woman wearing a white blouse under a gray cardigan"
+        },
+        {
+          "id": "P04",
+          "appearance": "the man with dark-rimmed glasses wearing a pale blue shirt and striped tie"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P03",
+          "start": 0,
+          "end": 1.92
+        },
+        {
+          "person": "P04",
+          "start": 2.32,
+          "end": 5.333333333333333
+        }
+      ]
+    },
+    {
+      "id": "e40",
+      "code": "E40",
+      "people": 4,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e40-gt.mp4",
+          "poster": "assets/posters/e40-gt.jpg",
+          "duration": 8.0
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e40-seed44.mp4",
+          "poster": "assets/posters/e40-seed44.jpg",
+          "duration": 7.875
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e40-seed45.mp4",
+          "poster": "assets/posters/e40-seed45.jpg",
+          "duration": 7.875
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the bald man wearing a black police uniform with a shoulder patch"
+        },
+        {
+          "id": "P02",
+          "appearance": "the blonde woman with a ponytail wearing a green blazer and layered necklace"
+        },
+        {
+          "id": "P03",
+          "appearance": "the man with short dark hair wearing a red plaid shirt"
+        },
+        {
+          "id": "P04",
+          "appearance": "the man with short brown hair wearing a navy jacket over a gray shirt"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P02",
+          "start": 0.08,
+          "end": 4.8
+        },
+        {
+          "person": "P04",
+          "start": 5.12,
+          "end": 7.84
+        }
+      ]
+    },
+    {
+      "id": "e41",
+      "code": "E41",
+      "people": 4,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e41-gt.mp4",
+          "poster": "assets/posters/e41-gt.jpg",
+          "duration": 5.333333333333333
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e41-seed44.mp4",
+          "poster": "assets/posters/e41-seed44.jpg",
+          "duration": 5.208333333333333
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e41-seed45.mp4",
+          "poster": "assets/posters/e41-seed45.jpg",
+          "duration": 5.208333333333333
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the woman with shoulder-length curly hair wearing a purple long-sleeve top"
+        },
+        {
+          "id": "P02",
+          "appearance": "the short-haired man wearing a tan jacket over a maroon shirt"
+        },
+        {
+          "id": "P03",
+          "appearance": "the man wearing a denim vest over a gray hoodie and plaid shirt"
+        },
+        {
+          "id": "P04",
+          "appearance": "the man with short dark hair wearing a dark suit, white shirt and tie"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P02",
+          "start": 0,
+          "end": 0.48
+        },
+        {
+          "person": "P03",
+          "start": 0.8,
+          "end": 5.2
+        }
+      ]
+    },
+    {
+      "id": "e42",
+      "code": "E42",
+      "people": 4,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e42-gt.mp4",
+          "poster": "assets/posters/e42-gt.jpg",
+          "duration": 5.0
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e42-seed44.mp4",
+          "poster": "assets/posters/e42-seed44.jpg",
+          "duration": 4.875
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e42-seed45.mp4",
+          "poster": "assets/posters/e42-seed45.jpg",
+          "duration": 4.875
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the man with curly dark hair and a beard wearing a blue and gray plaid shirt"
+        },
+        {
+          "id": "P02",
+          "appearance": "the woman with short dark hair wearing a pink floral top and a necklace"
+        },
+        {
+          "id": "P03",
+          "appearance": "the man with short dark hair wearing a green polo shirt and dark trousers"
+        },
+        {
+          "id": "P04",
+          "appearance": "the blonde woman with long hair wearing a black sleeveless top"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P02",
+          "start": 0,
+          "end": 3.04
+        },
+        {
+          "person": "P04",
+          "start": 3.12,
+          "end": 5.0
+        }
+      ]
+    },
+    {
+      "id": "e43",
+      "code": "E43",
+      "people": 4,
+      "videos": [
+        {
+          "label": "Ground truth",
+          "src": "assets/videos/e43-gt.mp4",
+          "poster": "assets/posters/e43-gt.jpg",
+          "duration": 10.333333333333334
+        },
+        {
+          "label": "AnyTalker · seed 44",
+          "src": "assets/videos/e43-seed44.mp4",
+          "poster": "assets/posters/e43-seed44.jpg",
+          "duration": 10.208333333333334
+        },
+        {
+          "label": "AnyTalker · seed 45",
+          "src": "assets/videos/e43-seed45.mp4",
+          "poster": "assets/posters/e43-seed45.jpg",
+          "duration": 10.208333333333334
+        }
+      ],
+      "identities": [
+        {
+          "id": "P01",
+          "appearance": "the man with short brown hair wearing a gray suit and holding a mobile phone"
+        },
+        {
+          "id": "P02",
+          "appearance": "the gray-haired man wearing a navy suit and purple tie and holding a folder"
+        },
+        {
+          "id": "P03",
+          "appearance": "the man with short hair wearing a purple shirt and striped tie with a badge on his belt"
+        },
+        {
+          "id": "P04",
+          "appearance": "the woman with a dark ponytail wearing a black blazer and earrings"
+        }
+      ],
+      "turns": [
+        {
+          "person": "P04",
+          "start": 0,
+          "end": 4.0
+        },
+        {
+          "person": "P01",
+          "start": 4.4,
+          "end": 10.333333333333334
+        }
+      ]
+    }
+  ]
+}

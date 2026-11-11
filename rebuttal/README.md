@@ -25,7 +25,7 @@ Serve this directory through an HTTP server with byte-range support for video se
 | E9 | Confidence intervals for metric and preference differences |
 | E10 | Metric agreement with human preference votes |
 | E11–E13 | Group-conversation clips with ground truth |
-| E14–E15 | Matched text-instruction comparisons |
+| E14–E15 | Baseline versus one gaze instruction: toward the speaker / toward the camera |
 
 Each experiment has a direct link, such as `#e13`. The figure and data table for E8 share the experiment number; `#e8-data` opens the underlying values.
 

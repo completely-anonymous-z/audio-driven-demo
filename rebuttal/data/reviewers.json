@@ -134,7 +134,7 @@
           "anchor": "BdXy-Q2",
           "title": "Text control of a specific participant",
           "comment": "Can text prompts control a specific listener’s gaze, nods, or other reactions? Please show matched examples that vary only the instruction, or clarify that explicit reaction control is outside the method’s scope.",
-          "intro": "Each set compares the generic prompt with two instruction variants under identical image, audio, seed, and sampling settings. E14 addresses the right and left participants in separate variants; both E15 variants address the left participant. The exact input text is shown below each video.",
+          "intro": "Each case compares the generic prompt with one gaze instruction under identical image, audio, seed, and sampling settings. E14 asks the right participant to turn toward the speaker and maintain eye contact while listening. E15 asks the left participant to face the camera and look directly into the lens while listening. The exact input text is shown below each video.",
           "evidence": [
             "e14",
             "e15"

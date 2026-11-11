@@ -407,7 +407,7 @@ function bindKeyboardTabs(selector) {
 
 async function initialize() {
   try {
-    const responses = await Promise.all([fetch('data/experiments.json?v=reviewer-update-4'), fetch('data/reviewers.json?v=reviewer-update-4')]);
+    const responses = await Promise.all([fetch('data/experiments.json?v=reviewer-update-5'), fetch('data/reviewers.json?v=reviewer-update-5')]);
     if (responses.some(response => !response.ok)) throw new Error('Supplement data unavailable');
     [experimentData, reviewData] = await Promise.all(responses.map(response => response.json()));
     const data = experimentData;

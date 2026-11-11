@@ -449,7 +449,7 @@
       "id": "e14",
       "code": "E14",
       "title": "Text comparison 1",
-      "description": "Compare each instruction with the baseline. The two instructions address different participants: the right participant and the left participant, respectively.",
+      "description": "Compare the generic prompt with an instruction for the right participant to turn toward the speaker and maintain eye contact while listening. The reference image, audio, seed, and sampling settings are unchanged.",
       "videos": [
         {
           "label": "Generic prompt",
@@ -464,13 +464,6 @@
           "poster": "assets/posters/e14-1.jpg",
           "duration": 8.375,
           "prompt": "These people are talking to each other. The right listener turns toward the speaker and maintains eye contact with the speaker while listening."
-        },
-        {
-          "label": "Left participant: toward left edge",
-          "src": "assets/videos/e14-2.mp4",
-          "poster": "assets/posters/e14-2.jpg",
-          "duration": 8.375,
-          "prompt": "These people are talking to each other. The left listener turns the head and eyes toward the left edge of the image, away from the speaker."
         }
       ]
     },
@@ -478,7 +471,7 @@
       "id": "e15",
       "code": "E15",
       "title": "Text comparison 2",
-      "description": "The instruction variants name the left participant (pink top). The complete input text is shown beneath each video; left and right refer to the displayed image.",
+      "description": "Compare the generic prompt with an instruction for the left participant (pink top) to face the camera and look directly into the lens while listening. The reference image, audio, seed, and sampling settings are unchanged.",
       "videos": [
         {
           "label": "Generic prompt",
@@ -486,13 +479,6 @@
           "poster": "assets/posters/e15-0.jpg",
           "duration": 7.708333333333333,
           "prompt": "These people are talking to each other."
-        },
-        {
-          "label": "Left participant: toward right edge",
-          "src": "assets/videos/e15-1.mp4",
-          "poster": "assets/posters/e15-1.jpg",
-          "duration": 7.708333333333333,
-          "prompt": "These people are talking to each other. The left listener turns the head and eyes toward the right edge of the image, away from the speaker."
         },
         {
           "label": "Left participant: toward camera",

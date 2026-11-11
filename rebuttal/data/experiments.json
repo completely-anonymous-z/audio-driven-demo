@@ -27,7 +27,7 @@
     ],
     [
       "2",
-      "AnyTalker-1.3B (full, +12 h refinement)",
+      "Ours-1.3B (full, +12 h refinement)",
       "5.02",
       "0.32"
     ],
@@ -57,7 +57,7 @@
     ],
     [
       "3",
-      "AnyTalker-1.3B (full, +12 h refinement)",
+      "Ours-1.3B (full, +12 h refinement)",
       "4.36",
       "0.38"
     ],
@@ -87,7 +87,7 @@
     ],
     [
       "4",
-      "AnyTalker-1.3B (full, +12 h refinement)",
+      "Ours-1.3B (full, +12 h refinement)",
       "4.15",
       "0.49"
     ]
@@ -367,7 +367,7 @@
       "id": "e1",
       "code": "E1",
       "title": "Happy speech",
-      "description": "The right participant’s speech is edited toward a happy delivery. Observe the left participant in the 0.00–4.19 s listening interval. The emotion edit uses Step-Audio-EditX.",
+      "description": "Right audio: happy edit with Step-Audio-EditX. Watch the left listener at 0–4.19 s.",
       "videos": [
         {
           "label": "Original audio",
@@ -387,7 +387,7 @@
       "id": "e2",
       "code": "E2",
       "title": "Sad speech",
-      "description": "The left participant’s speech is edited toward a sad delivery. Observe the right participant in the 2.00–5.16 s listening interval. The emotion edit uses Step-Audio-EditX.",
+      "description": "Left audio: sad edit with Step-Audio-EditX. Watch the right listener at 2.00–5.16 s.",
       "videos": [
         {
           "label": "Original audio",
@@ -407,7 +407,7 @@
       "id": "e3",
       "code": "E3",
       "title": "Speaker muting",
-      "description": "The right participant’s audio is replaced with silence; the left audio is retained. The left woman no longer makes the head turn seen in the baseline. Shared comparison interval: 0–7.875 s.",
+      "description": "Right audio muted. Compare the left participant over the shared 0–7.875 s interval.",
       "videos": [
         {
           "label": "Original audio",
@@ -427,7 +427,7 @@
       "id": "e4",
       "code": "E4",
       "title": "A one-second audio shift",
-      "description": "The left audio is delayed by 1 s, with silence prepended; the right audio is retained. The wider mouth-opening motion before speech described in the response occurs in the left participant, whose audio is edited.",
+      "description": "Left audio delayed by 1 s. Compare the left participant on the same timeline.",
       "videos": [
         {
           "label": "Original audio",
@@ -449,7 +449,7 @@
       "id": "e14",
       "code": "E14",
       "title": "Text comparison 1",
-      "description": "Compare the generic prompt with an instruction for the right participant to turn toward the speaker and maintain eye contact while listening. The reference image, audio, seed, and sampling settings are unchanged.",
+      "description": "Compare the right participant: generic prompt versus looking toward the speaker.",
       "videos": [
         {
           "label": "Generic prompt",
@@ -471,7 +471,7 @@
       "id": "e15",
       "code": "E15",
       "title": "Text comparison 2",
-      "description": "Compare the generic prompt with an instruction for the left participant (pink top) to face the camera and look directly into the lens while listening. The reference image, audio, seed, and sampling settings are unchanged.",
+      "description": "Compare the left participant in pink: generic prompt versus looking at the camera.",
       "videos": [
         {
           "label": "Generic prompt",
@@ -495,7 +495,7 @@
       "id": "e11",
       "code": "E11",
       "title": "Listener orientation",
-      "description": "Source interval: 0.00–5.00 s. The silent participant in a waistcoat turns toward the other participants.",
+      "description": "Watch the silent participant in a waistcoat. Source interval: 0–5 s.",
       "videos": [
         {
           "label": "Ground truth",
@@ -504,7 +504,7 @@
           "duration": 5.0
         },
         {
-          "label": "AnyTalker · seed 45",
+          "label": "Ours · seed 45",
           "src": "assets/videos/e11-seed45.mp4",
           "poster": "assets/posters/e11-seed45.jpg",
           "duration": 5.0
@@ -515,7 +515,7 @@
       "id": "e12",
       "code": "E12",
       "title": "Gaze during listening",
-      "description": "Source interval: 0.00–5.00 s. The silent participant in a white blouse raises her gaze toward the speaking participant. This interval contains no speaker change.",
+      "description": "Watch the listener in a white blouse. Source interval: 0–5 s; no speaker change.",
       "videos": [
         {
           "label": "Ground truth",
@@ -524,7 +524,7 @@
           "duration": 5.0
         },
         {
-          "label": "AnyTalker · seed 45",
+          "label": "Ours · seed 45",
           "src": "assets/videos/e12-seed45.mp4",
           "poster": "assets/posters/e12-seed45.jpg",
           "duration": 5.0
@@ -535,7 +535,7 @@
       "id": "e13",
       "code": "E13",
       "title": "A change of speaker",
-      "description": "Source interval: 4.00–10.21 s. The central participant speaks at 4.56–6.48 s; the participant in a black coat starts at 6.72 s. The central participant later turns toward her.",
+      "description": "Watch the central participant turn toward the next speaker. Source interval: 4.00–10.21 s.",
       "videos": [
         {
           "label": "Ground truth",
@@ -544,7 +544,7 @@
           "duration": 6.208333333333333
         },
         {
-          "label": "AnyTalker · seed 45",
+          "label": "Ours · seed 45",
           "src": "assets/videos/e13-seed45.mp4",
           "poster": "assets/posters/e13-seed45.jpg",
           "duration": 6.208333333333333

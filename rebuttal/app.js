@@ -249,7 +249,7 @@ function getEvidence(id) {
   const isClip = experimentData.groupClips.some(item => item.id === id);
   const conditions = document.createElement('div');
   conditions.className = 'video-conditions';
-  conditions.innerHTML = `<span>AnyTalker-14B</span><span>Seed ${isClip ? '45' : '44'}</span><span>${isText ? 'Only the instruction changes' : isClip ? 'Matched ground-truth interval' : 'One audio track changed'}</span>`;
+  conditions.innerHTML = `<span>Ours-14B</span><span>Seed ${isClip ? '45' : '44'}</span><span>${isText ? 'Only the instruction changes' : isClip ? 'Matched ground-truth interval' : 'One audio track changed'}</span>`;
   const heading = $('.video-group-heading', player.root);
   heading.append(conditions);
   if (!isText) {
@@ -353,6 +353,7 @@ function showView() {
     $('#question-category').textContent = `Reviewer ${view.reviewer.id} · ${view.question.key}`;
     $('#question-title').textContent = view.question.title;
     $('#review-comment').textContent = view.question.comment;
+    $('#review-comment-details').open = false;
     $('#question-intro').textContent = view.question.intro;
     $('#comment-source').href = reviewData.source;
     $('#copy-question').dataset.anchor = view.question.anchor;
@@ -387,7 +388,7 @@ function showView() {
   $('#question-panel').hidden = false;
   reviewerMemory.set(view.reviewer.id, view.question.anchor);
   currentView = view;
-  document.title = `AnyTalker · ${view.reviewer.id} ${view.question.key}`;
+  document.title = `Supplementary results · ${view.reviewer.id} ${view.question.key}`;
   if (questionChanged) window.scrollTo({top:0, behavior:'instant'});
   if (view.requested === 'e8-data') requestAnimationFrame(() => $('#e8-data').scrollIntoView({block:'start'}));
 }
@@ -407,7 +408,7 @@ function bindKeyboardTabs(selector) {
 
 async function initialize() {
   try {
-    const responses = await Promise.all([fetch('data/experiments.json?v=reviewer-update-5'), fetch('data/reviewers.json?v=reviewer-update-5')]);
+    const responses = await Promise.all([fetch('data/experiments.json?v=reviewer-update-6'), fetch('data/reviewers.json?v=reviewer-update-6')]);
     if (responses.some(response => !response.ok)) throw new Error('Supplement data unavailable');
     [experimentData, reviewData] = await Promise.all(responses.map(response => response.json()));
     const data = experimentData;
@@ -419,7 +420,7 @@ async function initialize() {
     renderTable('scale-table', scaleHeaders, data.scale, {name:'Table E7: fixed-update data scaling',highlight:row=>row[0]==='24'});
     renderTable('trajectory-table', ['Unique data seen (hours)',...scaleHeaders.slice(1)], data.trajectory,
       {name:'Table E8: cumulative unique data',highlight:row=>row[0]==='12'});
-    renderTable('ci-table', ['People','Metric','Comparator','AnyTalker-14B','Comparator value','Difference','95% CI'], data.ci,
+    renderTable('ci-table', ['People','Metric','Comparator','Ours-14B','Comparator value','Difference','95% CI'], data.ci,
       {labels:[1,2],group:true,name:'Table E9: metric and preference differences'});
     renderTable('agreement-table', ['People','Human votes','Agreement accuracy (%) ↑'], data.agreement,
       {name:'Table E10: agreement with human preferences'});

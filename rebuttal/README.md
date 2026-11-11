@@ -1,6 +1,6 @@
-# AnyTalker supplementary experiments
+# Supplementary experiments
 
-Anonymous review supplement organized by reviewer, then by each weakness (W) or question (Q). The active comment is shown verbatim with its supporting evidence. Result tabs reuse the same tables and video players across review questions.
+Anonymous review supplement organized by reviewer, then by each weakness (W) or question (Q). The original review comment is available in a collapsed panel. Short captions explain how to view the results; detailed responses are maintained separately for OpenReview. Result tabs reuse the same tables and video players across review questions.
 
 Serve this directory through an HTTP server with byte-range support for video seeking. No build step or external runtime dependencies are required.
 
@@ -29,7 +29,7 @@ Serve this directory through an HTTP server with byte-range support for video se
 
 Each experiment has a direct link, such as `#e13`. The figure and data table for E8 share the experiment number; `#e8-data` opens the underlying values.
 
-All experiments use `These people are talking to each other.` except the explicit E14/E15 instruction variants. Their exact prompts are shown with the videos. Video comparisons support shared playback, seeking, speed, and one selected audio source.
+All experiments use `These people are talking to each other.` except the explicit E14/E15 instruction variants. Their exact prompts are shown with the videos. Video comparisons support shared playback, seeking, speed, and one audio source.
 
 The `data/` directory contains displayed results and CSV tables. All media are local under `assets/`; no analytics or third-party embeds are used.
 

@@ -9,7 +9,7 @@
           "anchor": "9eqr-W1",
           "title": "Audio-dependent listener behavior",
           "comment": "I note that the authors have clearly stated the limitations of ∆Resp in the appendix. Existing human preference, MLLM behavior detection, and motion evaluations support that the generated results exhibit more visible listener behaviors and higher naturalness, but they are not yet sufficient to distinguish whether these behaviors undergo meaningful temporal changes in response to another speaker's audio track, or mainly stem from a conversational scene motion prior that does not depend on the other party's audio track.",
-          "intro": "These two-person comparisons keep the reference image, listener audio and generic prompt fixed. E1/E2 use Step-Audio-EditX for happy/sad emotion edits. E1 shows a stronger smile in the unchanged-audio left listener. In E3, muting the right track removes the left woman’s head turn seen in the baseline. E4 delays the left track by one second; the wider mouth-opening change is in the left participant whose audio is edited.",
+          "intro": "Compare each audio pair. The image, other audio track, and generic prompt are fixed.",
           "evidence": [
             "e1",
             "e2",
@@ -20,9 +20,9 @@
         {
           "key": "W2",
           "anchor": "9eqr-W2",
-          "title": "Components beyond single-person generation",
+          "title": "Multi-person component ablations",
           "comment": "The architectural ablations in Table 4 are conducted solely under the single-person HDTF setting using the Stage-1 1.3B model. While these ablations support the contribution of relevant components to single-person generation quality, they have not directly verified the respective effects of reference face features and spatial region constraints on multi-person audio binding, listener behaviors, and person-count extrapolation, which limits the explanation of the mechanism behind the performance gains.",
-          "intro": "The 1.3-billion-parameter (1.3B) component ablations cover two-, three-, and four-person inputs. The full stage-1 model improves both reported metrics over each ablation at every person count; the table also includes the complete model after 12 h of real-conversation refinement.",
+          "intro": "Compare component variants across two, three, and four people.",
           "evidence": [
             "e5"
           ]
@@ -30,9 +30,9 @@
         {
           "key": "W3",
           "anchor": "9eqr-W3",
-          "title": "Real-data efficiency and uncertainty",
+          "title": "Data scale and uncertainty",
           "comment": "Table 3 has supported the effectiveness of concatenated pre-training under the same 1.3B model scale, but performance variation curves across different real two-person data scales under a fixed training budget have not yet been reported; therefore, existing results can support that the strategy is effective under the 12-hour real data setting, but are still insufficient to fully characterize how its real-data efficiency varies with data scale, and it is also difficult to quantify the extent of real data saved solely through cross-system comparisons with MultiTalk. Regarding person-count extrapolation, the three-person and four-person tests each contain only 20 videos, and confidence intervals are not reported for the main results.",
-          "intro": "E7 fixes refinement at 5,000 optimizer updates across six real-data sizes. E8 tracks progress through a 24-hour unique-video pool. E9 reports the main-metric and human-preference difference intervals for two, three, and four people. Figure E8 and Table E8 use the same sampling seed in both runs; their samplers return identical training samples at each iteration. The horizontal axis counts unique video hours, with repeats counted once.",
+          "intro": "E7: fixed-update data scaling. E8: unique-data learning curves. E9: difference confidence intervals.",
           "evidence": [
             "e7",
             "e8",
@@ -42,9 +42,9 @@
         {
           "key": "Q1",
           "anchor": "9eqr-Q1",
-          "title": "Changing only the other speaker’s audio",
+          "title": "Audio interventions",
           "comment": "Under the premise of fixing the reference image, the listener's own audio track, and the random seed, if interventions are applied only to the other speaker's audio track (such as temporal shifting, altering pause/turn-taking rhythms, or muting? ), will the generated listener actions (nodding, head-turning, or gaze events) exhibit interpretable temporal changes accordingly?",
-          "intro": "Video comparisons E1–E4 change one participant’s audio while keeping the image, the other audio and generic prompt fixed. E1 and E3 show changes in the unchanged-audio listener: a stronger smile and the absence of a baseline head turn, respectively. E4’s wider mouth-opening motion belongs to the left participant whose audio is delayed. E3 compares the common 0–7.875 s interval at the original speed.",
+          "intro": "Compare each audio pair. The image, other audio track, and generic prompt are fixed.",
           "evidence": [
             "e1",
             "e2",
@@ -55,9 +55,9 @@
         {
           "key": "Q2",
           "anchor": "9eqr-Q2",
-          "title": "Multi-person component ablations",
+          "title": "Component ablations",
           "comment": "If the architectural ablation variants already defined in Table 4 are directly extended to the two person as well as three and four person test sets of InteractivePerson, what are the performance differences among the components in multi person lip binding, listener reaction metrics, and person-count extrapolation?",
-          "intro": "The table extends the stage-1 component comparisons to 60 two-person, 20 three-person, and 20 four-person InteractivePerson inputs. The Audio-Face Cross Attention (AFCA) ablation removes face-token concatenation while retaining per-identity audio attention, masks, and accumulation.",
+          "intro": "Compare component variants across two, three, and four people.",
           "evidence": [
             "e5"
           ]
@@ -65,9 +65,9 @@
         {
           "key": "Q3",
           "anchor": "9eqr-Q3",
-          "title": "Confidence intervals on the main results",
+          "title": "Difference confidence intervals",
           "comment": "Please additionally provide the confidence intervals on the main objective metrics and human preferences for the InteractivePerson test set.",
-          "intro": "We report 95% confidence intervals for AnyTalker-14B minus MultiTalk with two people, and minus Playmate2 with three or four. All nine intervals exclude zero in the direction favoring AnyTalker. The calculation protocol is provided below the table.",
+          "intro": "Metric and preference differences with 95% confidence intervals for two to four people.",
           "evidence": [
             "e9"
           ]
@@ -75,9 +75,9 @@
         {
           "key": "Q4",
           "anchor": "9eqr-Q4",
-          "title": "Performance across real-data scales",
+          "title": "Real-data scaling",
           "comment": "As a suggestion to more fully characterize the boundaries of the method, providing performance trends across different real two person data scales under a fixed 1.3B model and training budget, or offering a stratified quantitative analysis regarding the degree of substantial subject deviation from the first-frame fixed mask and regional overlap, would help more accurately define the data efficiency and scope of applicability.",
-          "intro": "Real single-person (RS) pretraining is compared with mixed RS and concatenated multi-person (CM) pretraining. The fixed-budget study varies real two-person data from 3 to 96 hours at 1.3-billion-parameter (1.3B) and 5,000 updates. With 24 hours, RS+CM reaches 5.05 / 0.32 (duration-weighted speaking-phase lip-synchronization confidence (Sync-C*) / listening-phase eye-motion gap to ground truth (ΔResp)), compared with 4.96 / 0.32 for RS with 96 hours. The learning curve separately follows cumulative unique data exposure. Figure E8 and Table E8 use the same sampling seed in both runs; their samplers return identical training samples at each iteration. The horizontal axis counts unique video hours, with repeats counted once.",
+          "intro": "E7 varies dataset size at 5,000 updates. E8 tracks cumulative unique training hours.",
           "evidence": [
             "e7",
             "e8"
@@ -91,9 +91,9 @@
         {
           "key": "W1",
           "anchor": "BdXy-W1",
-          "title": "Listener behavior and text instructions",
+          "title": "Audio and text controls",
           "comment": "Figure 4 checks whether reactions occur, but not whether they happen at the right time or match what the speaker says. The responsiveness metric measures average movement during listening, and human preferences measure overall naturalness. Neither establishes that reactions depend on the speaker’s audio. The model also accepts text, but only generic prompts are tested. It therefore remains unclear whether the listener movements are meaningful responses or general listening behaviors.",
-          "intro": "The audio comparisons fix image and text while changing one audio track. The text comparisons fix the image and both original audio tracks while changing only the instruction. Each group provides synchronized playback and the conditions needed to compare the same participant.",
+          "intro": "Use E1–E4 for audio changes and E14/E15 for text instructions.",
           "evidence": [
             "e1",
             "e2",
@@ -106,9 +106,9 @@
         {
           "key": "W2",
           "anchor": "BdXy-W2",
-          "title": "Multi-person ablations and data efficiency",
+          "title": "Ablations and data scaling",
           "comment": "Table 4 tests the architectural components only on single-person videos using the smaller model. This does not show how these components prevent one person from following another person’s audio or support generation with more people. Table 3 tests training data choices with two people, but not larger groups. The data-efficiency claim also needs comparisons using different amounts of real conversation data under the same training budget.",
-          "intro": "The component and training-data tables cover two, three, and four people. The data-efficiency study compares real single-person (RS) initialization with a mixture of RS and concatenated multi-person (CM) clips at six real-data sizes with the same 5,000 refinement budget, followed by a separate learning-curve analysis. Figure E8 and Table E8 use the same sampling seed in both runs; their samplers return identical training samples at each iteration. The horizontal axis counts unique video hours, with repeats counted once.",
+          "intro": "E5/E6: component and data ablations. E7/E8: data-scaling comparisons.",
           "evidence": [
             "e5",
             "e6",
@@ -119,9 +119,9 @@
         {
           "key": "Q1",
           "anchor": "BdXy-Q1",
-          "title": "Matched audio interventions",
+          "title": "Audio interventions",
           "comment": "If one speaker’s audio is changed while the listener’s audio, reference image, prompt, and random seed remain fixed, do the listener’s reactions change appropriately? Please evaluate reaction timing and relevance, rather than occurrence alone.",
-          "intro": "E1/E2 use Step-Audio-EditX to edit one participant’s emotional delivery while keeping the other audio track, reference image, generic prompt and seed fixed. E1 shows a stronger left-listener smile after editing the right speaker. In E3, the left woman no longer makes the head turn seen in the baseline when the right track is muted. E4 shows a wider mouth opening in the left participant whose own audio is delayed by one second. E3 uses the common 0–7.875 s interval.",
+          "intro": "Compare each audio pair. The image, other audio track, and generic prompt are fixed.",
           "evidence": [
             "e1",
             "e2",
@@ -132,9 +132,9 @@
         {
           "key": "Q2",
           "anchor": "BdXy-Q2",
-          "title": "Text control of a specific participant",
+          "title": "Text control",
           "comment": "Can text prompts control a specific listener’s gaze, nods, or other reactions? Please show matched examples that vary only the instruction, or clarify that explicit reaction control is outside the method’s scope.",
-          "intro": "Each case compares the generic prompt with one gaze instruction under identical image, audio, seed, and sampling settings. E14 asks the right participant to turn toward the speaker and maintain eye contact while listening. E15 asks the left participant to face the camera and look directly into the lens while listening. The exact input text is shown below each video.",
+          "intro": "Each case compares the generic prompt with one gaze instruction. Image, audio, seed, and sampling are fixed.",
           "evidence": [
             "e14",
             "e15"
@@ -143,9 +143,9 @@
         {
           "key": "Q3",
           "anchor": "BdXy-Q3",
-          "title": "Component and data ablations on larger groups",
+          "title": "Component and data ablations",
           "comment": "Can the architectural and data ablations be evaluated on three, and four person inputs, including incorrect mouth activation during silence and responses to another person’s audio?",
-          "intro": "E5 extends component ablations to three and four people, while E6 extends all five training-data strategies. Both use duration-weighted speaking-phase lip-synchronization confidence (Sync-C*) and listening-phase eye-motion gap to ground truth (ΔResp). The matched muting and happy-speech comparisons provide additional audio-intervention examples.",
+          "intro": "E5/E6 compare component and data variants; E3/E1 show audio interventions.",
           "evidence": [
             "e5",
             "e6",
@@ -156,9 +156,9 @@
         {
           "key": "Q4",
           "anchor": "BdXy-Q4",
-          "title": "Directed gaze around speaker changes",
+          "title": "Listener gaze",
           "comment": "The three- and four-person results show visible listener movements, but do not establish whether each listener responds to the appropriate speaker. In larger groups, who determines which participant a speaker addresses and which listeners should react? Please assess directed gaze and listener responses around speaker changes, rather than only whether reactions occur somewhere in the video.",
-          "intro": "Participant-specific audio tracks determine who speaks and when. These examples use the generic prompt without an addressee label or listener-specific gaze instruction. E13 contains a speaker change; E12 shows gaze during listening. Each comparison includes ground truth and the generated clip for the same interval.",
+          "intro": "Compare generated clips with ground truth over the same interval. E13 includes a speaker change.",
           "evidence": [
             "e13",
             "e12",
@@ -168,9 +168,9 @@
         {
           "key": "Q5",
           "anchor": "BdXy-Q5",
-          "title": "Data requirements under matched budgets",
+          "title": "Real-data scaling",
           "comment": "How does performance change with different amounts of real-conversation refinement data under matched training budgets? Does concatenated pretraining consistently reduce the amount needed?",
-          "intro": "At all six data sizes, mixed real single-person (RS) and concatenated multi-person (CM) pretraining has higher duration-weighted speaking-phase lip-synchronization confidence (Sync-C*) than RS; listening-phase eye-motion gap to ground truth (ΔResp) is lower at five sizes and tied at 96 hours. The fixed-budget table and unique-data learning curves are shown separately so their checkpoints can be interpreted using the corresponding budget. Figure E8 and Table E8 use the same sampling seed in both runs; their samplers return identical training samples at each iteration. The horizontal axis counts unique video hours, with repeats counted once.",
+          "intro": "E7 varies dataset size at 5,000 updates. E8 tracks cumulative unique training hours.",
           "evidence": [
             "e7",
             "e8"
@@ -184,9 +184,9 @@
         {
           "key": "W1",
           "anchor": "q7Va-W1",
-          "title": "Data economics and transfer from stage 1 (W1/W3)",
+          "title": "Training-data efficiency",
           "comment": "The overall approach feels like an engineering-level trick, as opposed to a principled new technique that has a novel breakthrough.  The two-stage training makes sense overall.  However, I'd like to challenge that the two-person or multiple-person videos are also widely available, based on previous method, despite it requires annoation. Can the authors provide more specific unit economic numbers to justify that training on 2000 hours of video data is better than asking people to do the annotation?  Also, the multiple-person interactions from real videos are more nuanced than any synthetic dataset, would a smaller set of real data but with rich annoation would beat the proposed methodology from both economic and performance perspective? The authors should provide this discussion.",
-          "intro": "W1 and W3 are addressed together. Concatenated multi-person (CM) training reuses single-person recordings to train multi-speaker correspondence before real-conversation refinement. E6 compares the training strategies across two to four people. At the same 1.3-billion-parameter (1.3B) model size and 5,000 refinement updates, E7 reaches 5.05 / 0.32 with real single-person (RS) plus CM pretraining and 24 h, versus 4.96 / 0.32 with RS and 96 h (duration-weighted speaking-phase lip-synchronization confidence (Sync-C*) / listening-phase eye-motion gap to ground truth (ΔResp)). E8 tracks cumulative unique-data exposure. These comparisons measure real-conversation data efficiency; the cost/performance of a smaller, richly annotated alternative has not been measured. Figure E8 and Table E8 use the same sampling seed in both runs; their samplers return identical training samples at each iteration. The horizontal axis counts unique video hours, with repeats counted once.",
+          "intro": "Use E6 for training-data ablations and E7/E8 for real-data scaling.",
           "evidence": [
             "e6",
             "e7",
@@ -196,9 +196,9 @@
         {
           "key": "W2",
           "anchor": "q7Va-W2",
-          "title": "Metric validation and visible interaction",
+          "title": "Metric and human agreement",
           "comment": "The proposed method quantifies listener motion, but its validity as a measure of natural interactivity is not sufficiently established. I personally feel the resulting video is very unnatural (i.e., gaze directions & facial expressions). This metric should be validated against blinded human ratings.",
-          "intro": "We compare 100 individual preference votes per person-count setting with the method attaining the lowest listening-phase eye-motion gap to ground truth (ΔResp) for that input. Agreement is 89%, 84%, and 77% for two, three, and four people. The matched video examples separately illustrate listener gaze and facial-expression changes.",
+          "intro": "E10 reports agreement with human preferences; E12/E13 and E1 provide video examples.",
           "evidence": [
             "e10",
             "e12",
@@ -209,9 +209,9 @@
         {
           "key": "W3",
           "anchor": "q7Va-W3",
-          "title": "How stage 1 helps real-conversation refinement (W1/W3)",
+          "title": "Pretraining and refinement",
           "comment": "Besides, I don't see any deep, insightful analysis of why the first-stage training would \"ease\" the second-stage training.",
-          "intro": "This evidence is shared with the combined W1/W3 response. Concatenated training retains each source clip’s audio–face correspondence while exposing the model to multiple identities and separate audio streams. E6 compares the resulting initialization before and after real-data refinement. E8 shows that mixed real single-person (RS) and concatenated multi-person (CM) pretraining improves both metrics over RS at all 11 unique-data checkpoints. Figure E8 and Table E8 use the same sampling seed in both runs; their samplers return identical training samples at each iteration. The horizontal axis counts unique video hours, with repeats counted once.",
+          "intro": "Use E6 for training-data ablations and E7/E8 for real-data scaling.",
           "evidence": [
             "e6",
             "e7",
@@ -221,9 +221,9 @@
         {
           "key": "Q1",
           "anchor": "q7Va-Q1",
-          "title": "Data scale in the two training stages",
+          "title": "Training-data scale",
           "comment": "Do you see any scaling law applies in either the first stage or the second stage training? Why 2000 hours, why not 200 hours or 20000 hours, how does that curve look like for the final performance.",
-          "intro": "Stage 1 uses all usable single-person clips retained after filtering, approximately 2,000 hours. The supplementary stage-2 study evaluates 3, 6, 12, 24, 48, and 96 hours at a fixed 1.3-billion-parameter (1.3B) model and 5,000 updates. The separate learning curve reports progress through 24 hours of unique real video. Figure E8 and Table E8 use the same sampling seed in both runs; their samplers return identical training samples at each iteration. The horizontal axis counts unique video hours, with repeats counted once.",
+          "intro": "E7/E8 compare stage-2 real-data scaling from two pretraining initializations.",
           "evidence": [
             "e7",
             "e8"

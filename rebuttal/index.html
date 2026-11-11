@@ -10,10 +10,10 @@
 <title>AnyTalker · Reviewer Supplement</title>
 <link href="data:," rel="icon"/>
 <link href="styles.css?v=reviewer-update-2" rel="stylesheet"/>
-<script defer="" src="app.js?v=reviewer-update-3"></script>
+<script defer="" src="app.js?v=reviewer-update-4"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to the selected review comment</a>
+  <a class="skip-link" href="#main">Skip to the current review comment</a>
   <header class="site-header">
     <a class="wordmark" href="#9eqr-W1">AnyTalker <span class="header-tag">Review supplement</span></a>
     <span class="anonymous-label">Anonymous submission</span>
@@ -51,7 +51,7 @@
         <noscript><p>Enable JavaScript to select a reviewer and view the corresponding comment and evidence. Result tables are also available as <a href="data/component.csv">component</a>, <a href="data/dataAblation.csv">training-data</a>, <a href="data/scale.csv">data-scale</a>, <a href="data/trajectory.csv">learning-curve</a>, <a href="data/ci.csv">confidence-interval</a>, and <a href="data/agreement.csv">human-agreement</a> CSV files.</p></noscript>
       </main>
     </div>
-    <footer><span>AnyTalker · Anonymous supplementary results</span><span>Experiments E1–E45</span></footer>
+    <footer><span>AnyTalker · Anonymous supplementary results</span><span>Experiments E1–E15</span></footer>
   </div>
   <div id="evidence-store" hidden aria-hidden="true">
 <article class="table-block evidence-block" data-evidence="e5" id="e5">
@@ -79,12 +79,6 @@
 </figure><details class="data-details" id="e8-data"><summary><span><b>Table E8</b> · All 11 learning-curve checkpoints</span><span aria-hidden="true">+</span></summary><div class="details-content"><p><a download="" href="data/trajectory.csv">Download the plotted data (CSV) ↓</a></p><div class="table-scroll" id="trajectory-table"></div></div></details></article>
 <article class="table-block evidence-block" data-evidence="e9" id="e9"><div class="item-heading"><div><span class="item-code">Table E9</span><h3>Main metrics and human preference</h3></div><a download="" href="data/ci.csv">CSV ↓</a></div><p class="evidence-context">95% confidence intervals (CI) for AnyTalker-14B minus the comparator: MultiTalk for two people, Playmate2 for three and four. Metrics are duration-weighted speaking-phase lip-synchronization confidence (Sync-C*, higher is better) and the listening-phase eye-motion gap to ground truth (ΔResp, lower is better). Preference differences use percentage points (pp). Positive differences favor AnyTalker for Sync-C* and preference; negative differences favor AnyTalker for ΔResp.</p><div class="table-scroll" id="ci-table"></div><details class="data-details"><summary><span>How the intervals are calculated</span><span aria-hidden="true">+</span></summary><div class="details-content"><p>We use 10,000 bootstrap replicates and the 2.5th and 97.5th percentiles. Objective metrics use paired input resampling within each person-count subset (60/20/20), retaining the paper’s phase-duration weights. Human preference uses independent resampling of raters and inputs, with each vote weighted by both sampling multiplicities. All originally shown methods remain in the preference denominator. Preference differences are in percentage points (pp).</p></div></details></article>
 <article class="table-block compact-table evidence-block" data-evidence="e10" id="e10"><div class="item-heading"><div><span class="item-code">Table E10</span><h3>Agreement with individual human choices</h3></div><a download="" href="data/agreement.csv">CSV ↓</a></div><p class="evidence-context">We take 100 individual preference votes per person-count setting from the paper’s blinded study. A match occurs when the human-selected method has the lowest listening-phase eye-motion gap to ground truth (ΔResp) among the methods shown for that input. Different raters may evaluate the same input; tied metric minima count as matches.</p><div class="table-scroll" id="agreement-table"></div><p class="small-note">The original study involved 25 non-author raters, hidden method names, and randomized presentation order. Two-person comparisons have four candidate methods; three- and four-person comparisons have two. Each selected vote contributes one match or non-match.</p></article>
-<article class="collection evidence-block" data-evidence="collection" id="collection">
-<div class="item-heading"><div><span class="item-code">E14–E43</span><h3>All 30 scenes · both seeds</h3></div><button class="copy-link" data-anchor="collection">Copy link ↗</button></div><p class="evidence-context">Final AnyTalker-14B; 20 three-person and 10 four-person scenes, each with ground truth (GT) and seeds 44/45. Fixed prompt: “These people are talking to each other.”</p>
-<p class="item-description">Each scene contains ground truth and both generations. The generated clips use the original continuous recording for playback; generation is conditioned on separated participant tracks. Speaking intervals below are input annotations.</p>
-<div class="collection-controls"><label>Participants<select id="people-filter"><option value="all">All participants</option><option value="3">3 people</option><option value="4">4 people</option></select></label><label class="case-select-label">Scene<select id="case-select"></select></label><div class="step-buttons"><button aria-label="Previous scene" id="previous-case">←</button><button aria-label="Next scene" id="next-case">→</button></div></div>
-<div id="full-case"></div>
-</article>
   </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 </body>

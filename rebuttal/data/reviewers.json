@@ -99,8 +99,8 @@
             "e2",
             "e3",
             "e4",
-            "e44",
-            "e45"
+            "e14",
+            "e15"
           ]
         },
         {
@@ -134,10 +134,10 @@
           "anchor": "BdXy-Q2",
           "title": "Text control of a specific participant",
           "comment": "Can text prompts control a specific listener’s gaze, nods, or other reactions? Please show matched examples that vary only the instruction, or clarify that explicit reaction control is outside the method’s scope.",
-          "intro": "Each set compares the generic prompt with two instruction variants under identical image, audio, seed, and sampling settings. E44 addresses the right and left participants in separate variants; both E45 variants address the left participant. The exact input text is shown below each video.",
+          "intro": "Each set compares the generic prompt with two instruction variants under identical image, audio, seed, and sampling settings. E14 addresses the right and left participants in separate variants; both E15 variants address the left participant. The exact input text is shown below each video.",
           "evidence": [
-            "e44",
-            "e45"
+            "e14",
+            "e15"
           ]
         },
         {
@@ -158,12 +158,11 @@
           "anchor": "BdXy-Q4",
           "title": "Directed gaze around speaker changes",
           "comment": "The three- and four-person results show visible listener movements, but do not establish whether each listener responds to the appropriate speaker. In larger groups, who determines which participant a speaker addresses and which listeners should react? Please assess directed gaze and listener responses around speaker changes, rather than only whether reactions occur somewhere in the video.",
-          "intro": "Participant-specific audio tracks determine who speaks and when. These examples use the generic prompt without an addressee label or listener-specific gaze instruction. E13 contains a speaker change; E12 shows gaze during listening. The full collection includes 20 three-person and 10 four-person scenes with ground truth (GT) and two seeds.",
+          "intro": "Participant-specific audio tracks determine who speaks and when. These examples use the generic prompt without an addressee label or listener-specific gaze instruction. E13 contains a speaker change; E12 shows gaze during listening. Each comparison includes ground truth and the generated clip for the same interval.",
           "evidence": [
             "e13",
             "e12",
-            "e11",
-            "collection"
+            "e11"
           ]
         },
         {
@@ -204,8 +203,7 @@
             "e10",
             "e12",
             "e13",
-            "e1",
-            "collection"
+            "e1"
           ]
         },
         {

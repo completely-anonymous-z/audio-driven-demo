@@ -5,7 +5,6 @@ const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const escapeHTML = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const players = new Set();
 let experimentData;
-let galleryPlayer;
 let toastTimer;
 let reviewData;
 let currentView;
@@ -94,7 +93,7 @@ class ComparisonPlayer {
         <label class="control-select">Speed<select class="speed-select" aria-label="Playback speed for ${group.code}"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option></select></label>
       </div>
       <p class="player-status" role="status"></p>
-      ${group.fullCase ? `<p class="video-footnote"><a href="#${group.fullCase}">Open the full scene with both seeds ↗</a></p>` : ''}`;
+      `;
     host.append(this.root);
     this.videos = $$('video', this.root);
     this.playButton = $('.play-button', this.root);
@@ -233,37 +232,11 @@ const evidenceLabels = {
   e5:['E5','Components'], e6:['E6','Training data'], e7:['E7','Data scale'],
   e8:['E8','Learning curves'], e9:['E9','Confidence intervals'], e10:['E10','Human agreement'],
   e11:['E11','Listener orientation'], e12:['E12','Listening gaze'], e13:['E13','Speaker change'],
-  collection:['E14–E43','All 30 scenes'], e44:['E44','Text comparison 1'], e45:['E45','Text comparison 2']
+  e14:['E14','Text comparison 1'], e15:['E15','Text comparison 2']
 };
-
-function filteredCases() {
-  const count = $('#people-filter').value;
-  return experimentData.groupCases.filter(group => count === 'all' || group.people === Number(count));
-}
-
-function populateCaseSelect(selected) {
-  const cases = filteredCases();
-  $('#case-select').innerHTML = cases.map(group => `<option value="${group.id}">${group.code} · ${group.people} people</option>`).join('');
-  if (cases.some(group => group.id === selected)) $('#case-select').value = selected;
-}
-
-function showCase(id) {
-  const group = experimentData.groupCases.find(item => item.id === id);
-  if (!group) return;
-  if (!galleryPlayer || galleryPlayer.group.id !== id) {
-    if (galleryPlayer) galleryPlayer.destroy();
-    galleryPlayer = new ComparisonPlayer(group, $('#full-case'), {timeline:true});
-  }
-  $('#case-select').value = id;
-  const cases = filteredCases();
-  const position = cases.findIndex(item => item.id === id);
-  $('#previous-case').disabled = position <= 0;
-  $('#next-case').disabled = position >= cases.length - 1;
-}
 
 function normalizeEvidence(id) {
   if (id === 'e8-data') return 'e8';
-  if (experimentData.groupCases.some(group => group.id === id)) return 'collection';
   return id;
 }
 
@@ -299,9 +272,9 @@ function getQuestion(anchor) {
 }
 
 function defaultQuestionForEvidence(id) {
-  if (id === 'collection' || /^(e11|e12|e13)$/.test(id)) return 'BdXy-Q4';
+  if (/^(e11|e12|e13)$/.test(id)) return 'BdXy-Q4';
   if (/^e[1-4]$/.test(id)) return '9eqr-Q1';
-  return {e5:'9eqr-Q2', e6:'BdXy-Q3', e7:'9eqr-Q4', e8:'9eqr-Q4', e9:'9eqr-Q3', e10:'q7Va-W2', e44:'BdXy-Q2', e45:'BdXy-Q2'}[id];
+  return {e5:'9eqr-Q2', e6:'BdXy-Q3', e7:'9eqr-Q4', e8:'9eqr-Q4', e9:'9eqr-Q3', e10:'q7Va-W2', e14:'BdXy-Q2', e15:'BdXy-Q2'}[id];
 }
 
 function resolveRoute() {
@@ -312,7 +285,7 @@ function resolveRoute() {
   let match = getQuestion(questionAnchor) || getQuestion(textOnlyFallbacks[questionAnchor.toLowerCase()] || '');
   let requested = detail;
   if (!match) {
-    const aliases = {audio:'e1', ablations:'e5', 'data-efficiency':'e7', intervals:'e9', 'human-agreement':'e10', 'group-conversations':'e13', 'text-instructions':'e44'};
+    const aliases = {audio:'e1', ablations:'e5', 'data-efficiency':'e7', intervals:'e9', 'human-agreement':'e10', 'group-conversations':'e13', 'text-instructions':'e14'};
     requested = aliases[hash] || hash;
     const owner = defaultQuestionForEvidence(normalizeEvidence(requested));
     match = getQuestion(owner || '9eqr-W1');
@@ -410,14 +383,6 @@ function showView() {
     $('#evidence-panel').removeAttribute('aria-labelledby');
     if (host.firstElementChild) $('#evidence-store').append(host.firstElementChild);
   }
-  if (view.evidence === 'collection') {
-    const requestedCase = experimentData.groupCases.find(group => group.id === view.requested);
-    if (requestedCase) {
-      if (!filteredCases().some(group => group.id === requestedCase.id)) $('#people-filter').value = 'all';
-      populateCaseSelect(requestedCase.id);
-    }
-    showCase(requestedCase ? requestedCase.id : $('#case-select').value);
-  }
   if (view.requested === 'e8-data') $('#e8-data').open = true;
   $('#question-panel').hidden = false;
   reviewerMemory.set(view.reviewer.id, view.question.anchor);
@@ -442,7 +407,7 @@ function bindKeyboardTabs(selector) {
 
 async function initialize() {
   try {
-    const responses = await Promise.all([fetch('data/experiments.json?v=reviewer-update-3'), fetch('data/reviewers.json?v=reviewer-update-3')]);
+    const responses = await Promise.all([fetch('data/experiments.json?v=reviewer-update-4'), fetch('data/reviewers.json?v=reviewer-update-4')]);
     if (responses.some(response => !response.ok)) throw new Error('Supplement data unavailable');
     [experimentData, reviewData] = await Promise.all(responses.map(response => response.json()));
     const data = experimentData;
@@ -460,19 +425,6 @@ async function initialize() {
       {name:'Table E10: agreement with human preferences'});
     $$('#evidence-store [data-evidence]').forEach(node => evidenceCache.set(node.dataset.evidence, {node}));
     [...data.audio,...data.groupClips,...data.text].forEach(group => videoIndex.set(group.id, group));
-    populateCaseSelect();
-    $('#people-filter').addEventListener('change', () => {
-      populateCaseSelect();
-      navigate(currentView.question.anchor, $('#case-select').value);
-    });
-    $('#case-select').addEventListener('change', event => navigate(currentView.question.anchor, event.target.value));
-    for (const [selector, offset] of [['#previous-case',-1],['#next-case',1]]) {
-      $(selector).addEventListener('click', () => {
-        const cases = filteredCases();
-        const index = cases.findIndex(item => item.id === $('#case-select').value) + offset;
-        if (cases[index]) navigate(currentView.question.anchor, cases[index].id);
-      });
-    }
     $$('.table-filter').forEach(filter => filter.addEventListener('click', event => {
       const button = event.target.closest('button[data-people]');
       if (!button) return;
